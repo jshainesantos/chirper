@@ -1,7 +1,7 @@
 import React from "react";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
 
-const Post = () => {
+const Post = ({ body, email, name, date_posted }) => {
   return (
     <div>
       <div className="card lg bg-base-100 shadow-xl">
@@ -9,21 +9,18 @@ const Post = () => {
           <div className="flex items-center">
             <div className="avatar placeholder">
               <div className="bg-neutral text-neutral-content rounded-full w-16">
-                <span className="text-3xl">JS</span>
+                <span className="text-3xl"></span>
               </div>
             </div>
             <div className="name ml-4">
-              <p className="text-lg font-bold">JOHN SMITH</p>
-              <p>Just Now</p>
+              <p className="text-lg font-bold">{name}</p>
+              <p>🕐 {date_posted}</p>
             </div>
           </div>
 
-          <h2 className="card-title mt-5">New album is released!</h2>
+          <h2 className="card-title mt-5">{email}</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
-            consequuntur odio nam magnam maiores maxime nobis. Aut voluptas
-            harum vitae hic distinctio sunt modi nulla inventore, odio et
-            voluptatibus deleniti?
+           {body}
           </p>
 
           <div className="flex space-x-6 text-2xl mt-3">
